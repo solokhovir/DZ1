@@ -1,0 +1,10 @@
+<div>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Загрузить</button>
+    </form>
+    {% if img_obj %}
+        <img src="{{ img_obj.image.url }}" alt="connect" style="width: 256px; height: 256px">
+    {% endif %}
+</div>
